@@ -1,6 +1,3 @@
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, set } from "firebase/database";
-
 const firebaseConfig = {
   apiKey: "AIzaSyC5A2GeyIgaWaapl0adfp77wph7q3w6ds0",
   authDomain: "learnmutiny-60952.firebaseapp.com",
@@ -9,8 +6,6 @@ const firebaseConfig = {
   messagingSenderId: "554213932048",
   appId: "1:554213932048:web:17ad647356f22fe261de95",
 };
-
-const firebase = initializeApp(firebaseConfig);
 
 const app = (document.querySelector("#app").innerHTML = `
   <div>
