@@ -16,7 +16,7 @@ const firebase = initializeApp(firebaseConfig);
 const app = (document.querySelector("#app").innerHTML = `
   <div>
     <div class="main">
-    <img src="./assets/bear.PNG" alt="bear2" />
+    <img src="./assets/bear.png" alt="bear2" />
       <h1 id="title">learnmutiny.</h1>
         <form id="form">
           <input class="inputs" type="text" id="username" placeholder="username." />
