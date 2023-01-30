@@ -50,9 +50,22 @@ img {
   cursor: pointer;
 }
 
+.inputs:-webkit-autofill {
+  background: none;
+  border: none;
+  border-bottom: 1.5px solid white;
+  font-size: 1.5rem;
+  outline: none;
+  padding-bottom: 5px;
+  transition: 0.3s linear;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 0 50px #242424 inset; /* Change the color to your own background color */
+}
+
 .inputs:focus {
   color: white;
   border-bottom: 3.2px solid rgba(241, 241, 241, 0.866);
+  background-color: transparent;
 }
 
 ::-webkit-input-placeholder {
