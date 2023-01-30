@@ -5,6 +5,8 @@ import {
   ref,
 } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
 
+const DOMAIN = import.meta.env.DOMAIN_URL;
+
 const firebaseConfig = {
   apiKey: "AIzaSyC5A2GeyIgaWaapl0adfp77wph7q3w6ds0",
   authDomain: "learnmutiny-60952.firebaseapp.com",
@@ -12,7 +14,7 @@ const firebaseConfig = {
   storageBucket: "learnmutiny-60952.appspot.com",
   messagingSenderId: "554213932048",
   appId: "1:554213932048:web:17ad647356f22fe261de95",
-  databaseUrl: import.meta.env.DOMAIN_URL,
+  databaseUrl: DOMAIN,
 };
 
 const firebase = initializeApp(firebaseConfig);
