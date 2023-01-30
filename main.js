@@ -1,3 +1,6 @@
+import { initializeApp } from "firebase/app";
+import { getDatabase, set, ref } from "firebase/database";
+
 const firebaseConfig = {
   apiKey: "AIzaSyC5A2GeyIgaWaapl0adfp77wph7q3w6ds0",
   authDomain: "learnmutiny-60952.firebaseapp.com",
@@ -5,13 +8,16 @@ const firebaseConfig = {
   storageBucket: "learnmutiny-60952.appspot.com",
   messagingSenderId: "554213932048",
   appId: "1:554213932048:web:17ad647356f22fe261de95",
+  databaseUrl: "https://learnmutiny-60952-default-rtdb.firebaseio.com/",
 };
+
+const firebase = initializeApp(firebaseConfig);
 
 const app = (document.querySelector("#app").innerHTML = `
   <div>
     <div class="main">
     <img src="./assets/bear.PNG" alt="bear2" />
-      <h1 class="title">learnmutiny.</h1>
+      <h1 id="title">learnmutiny.</h1>
         <form id="form">
           <input class="inputs" type="text" id="username" placeholder="username." />
           <input class="inputs" type="email" id="email" placeholder="email." />
@@ -25,9 +31,13 @@ const nextButton = document.querySelector("#next");
 
 nextButton.addEventListener("click", (e) => {
   e.preventDefault();
+  document.getElementById("title").innerHTML = "thanks.";
 
-  const email = document.getElementById("email").value;
-  const username = document.getElementById("username").value;
+  let em = document.getElementById("email");
+  let u = document.getElementById("username");
+
+  let email = document.getElementById("email").value;
+  let username = document.getElementById("username").value;
 
   let usernameVal = validateUsername(username);
   if (usernameVal == false) {
@@ -39,10 +49,20 @@ nextButton.addEventListener("click", (e) => {
   }
 
   storeEmail(emailVal, usernameVal);
+  blockInputs(em, u);
 });
 
+function blockInputs(em, us) {
+  em.value = "";
+  us.value = "";
+  em.setAttribute("disabled", true);
+  us.setAttribute("disabled", true);
+  em.classList.add("inputs-clicked");
+  us.classList.add("inputs-clicked");
+}
+
 function storeEmail(email, name) {
-  const db = getDatabase();
+  const db = getDatabase(firebase);
   set(ref(db, `users/${name}`), {
     username: name,
     email: email,
