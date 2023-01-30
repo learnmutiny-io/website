@@ -114,7 +114,7 @@ img {
   cursor: not-allowed;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 680px) {
   html {
     height: webkit-fill-available;
   }

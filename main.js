@@ -12,7 +12,7 @@ const firebaseConfig = {
   storageBucket: "learnmutiny-60952.appspot.com",
   messagingSenderId: "554213932048",
   appId: "1:554213932048:web:17ad647356f22fe261de95",
-  databaseUrl: "https://learnmutiny-60952-default-rtdb.firebaseio.com/",
+  databaseUrl: import.meta.env.DOMAIN_URL,
 };
 
 const firebase = initializeApp(firebaseConfig);
