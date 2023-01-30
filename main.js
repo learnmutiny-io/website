@@ -5,7 +5,7 @@ import {
   ref,
 } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
 
-const DOMAIN = import.meta.env.DOMAIN_URL;
+const DOMAIN = import.meta.env.VITE_DOMAIN_URL;
 
 const firebaseConfig = {
   apiKey: "AIzaSyC5A2GeyIgaWaapl0adfp77wph7q3w6ds0",
