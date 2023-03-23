@@ -68,6 +68,16 @@ img {
   background-color: transparent;
 }
 
+.nav-bar {
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+
+.buttons {
+  margin: 2px;
+}
+
 ::-webkit-input-placeholder {
   font-family: inherit;
   transition: opacity 250ms ease-in-out;
@@ -90,19 +100,21 @@ img {
   justify-content: center;
 }
 
-#next {
+.buttons {
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 8px;
   border: 1px solid transparent;
-  font-size: 1.2rem;
+  font-size: large;
   font-family: inherit;
-  width: 6rem;
+  width: 7rem;
   height: 3rem;
   align-self: center;
   background-color: #454545;
   outline: none;
+  position: relative;
+  right: 10rem;
 }
 
 #next-click {

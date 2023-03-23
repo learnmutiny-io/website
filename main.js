@@ -19,14 +19,15 @@ const firebase = initializeApp(firebaseConfig);
 
 const app = (document.querySelector("#app").innerHTML = `
   <div>
+    <div class="nav-bar">
+      <div class="nav-buttons">
+        <button class="buttons" id="next">learn.</button>
+        <button class="buttons" id="discover">discover.</button>
+      </div>
+    </div>
     <div class="main">
     <img src="./assets/bear.png" alt="bear2" />
       <h1 id="title">learnmutiny.</h1>
-        <form id="form">
-          <input class="inputs" type="text" id="username" placeholder="username." />
-          <input class="inputs" type="email" id="email" placeholder="email." />
-          <button id="next">learn.</button>
-        </form>
     <div>
   </div>
 `);
@@ -37,23 +38,7 @@ nextButton.addEventListener("click", (e) => {
   e.preventDefault();
   document.getElementById("title").innerHTML = "thanks.";
 
-  let em = document.getElementById("email");
-  let u = document.getElementById("username");
-
-  let email = document.getElementById("email").value;
-  let username = document.getElementById("username").value;
-
-  let usernameVal = validateUsername(username);
-  if (usernameVal == false) {
-    return;
-  }
-  let emailVal = validateEmail(email);
-  if (emailVal == false) {
-    return;
-  }
-
   storeEmail(emailVal, usernameVal);
-  blockInputs(em, u);
 });
 
 function blockInputs(em, us) {
