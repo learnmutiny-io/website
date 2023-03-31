@@ -23,7 +23,7 @@ const app = (document.querySelector("#app").innerHTML = `
     <img src="./assets/bear.png" alt="bear2" />
       <h1 id="title">learnmutiny.</h1>
         <form id="form">
-          <input class="inputs" type="text" id="username" placeholder="username." />
+          <input class="inputs" type="text" id="username" placeholder="name." />
           <input class="inputs" type="email" id="email" placeholder="email." />
           <button id="next">learn.</button>
         </form>
