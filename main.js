@@ -18,37 +18,26 @@ const firebaseConfig = {
 const firebase = initializeApp(firebaseConfig);
 
 const app = (document.querySelector("#app").innerHTML = `
-  <div>
+  <div class="main">
     <div class="nav-bar">
       <div class="nav-buttons">
-        <button class="buttons" id="next">learn.</button>
         <button class="buttons" id="discover">discover.</button>
       </div>
     </div>
-    <div class="main">
-    <img src="./assets/bear.png" alt="bear2" />
+    <div>
+    <img class="pic" src="./assets/bear.png" alt="bear2" />
       <h1 id="title">learnmutiny.</h1>
     <div>
   </div>
 `);
 
-const nextButton = document.querySelector("#next");
+const discoverButton = document.querySelector("#discover");
 
-nextButton.addEventListener("click", (e) => {
+discoverButton.addEventListener("click", (e) => {
   e.preventDefault();
-  document.getElementById("title").innerHTML = "thanks.";
-
-  storeEmail(emailVal, usernameVal);
+  document.querySelector("img").classList.remove("pic");
+  document.querySelector("img").classList.add("pic-clicked");
 });
-
-function blockInputs(em, us) {
-  em.value = "";
-  us.value = "";
-  em.setAttribute("disabled", true);
-  us.setAttribute("disabled", true);
-  em.classList.add("inputs-clicked");
-  us.classList.add("inputs-clicked");
-}
 
 function storeEmail(email, name) {
   const db = getDatabase(firebase);
@@ -64,12 +53,4 @@ function validateEmail(email) {
   }
   alert("You have entered an invalid email address");
   return false;
-}
-
-function validateUsername(username) {
-  if (username.includes(".")) {
-    alert("Invalid username, no '.'");
-  } else {
-    return username;
-  }
 }

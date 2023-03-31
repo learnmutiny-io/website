@@ -15,20 +15,19 @@
 
 body {
   margin: 0;
-  display: flex;
-  background-color: #242424;
-  justify-content: center;
-  align-items: center;
   box-sizing: border-box;
+  background-color: #242424;
   width: 100vw;
   height: 100vh;
-  text-align: center;
 }
 
-img {
+.pic {
   margin: 0;
   padding: 0;
   width: 30%;
+}
+
+.pic-clicked {
 }
 
 #title {
@@ -39,68 +38,11 @@ img {
   line-height: 1.1;
 }
 
-.inputs {
-  background: none;
-  border: none;
-  border-bottom: 1.5px solid white;
-  font-size: 1.5rem;
-  outline: none;
-  padding-bottom: 5px;
-  transition: 0.3s linear;
-  cursor: pointer;
-}
-
-.inputs:-webkit-autofill {
-  background: none;
-  border: none;
-  border-bottom: 1.5px solid white;
-  font-size: 1.5rem;
-  outline: none;
-  padding-bottom: 5px;
-  transition: 0.3s linear;
-  cursor: pointer;
-  -webkit-box-shadow: 0 0 0 50px #242424 inset; /* Change the color to your own background color */
-}
-
-.inputs:focus {
-  color: white;
-  border-bottom: 3.2px solid rgba(241, 241, 241, 0.866);
-  background-color: transparent;
-}
-
 .nav-bar {
-  position: relative;
-  display: flex;
-  justify-content: end;
 }
 
 .buttons {
   margin: 2px;
-}
-
-::-webkit-input-placeholder {
-  font-family: inherit;
-  transition: opacity 250ms ease-in-out;
-}
-:focus::-webkit-input-placeholder {
-  opacity: 0.5;
-}
-
-#email {
-  margin: 1rem;
-}
-
-#username {
-  margin: 1rem;
-}
-
-#form {
-  padding-top: 2rem;
-  display: flex;
-  justify-content: center;
-}
-
-.buttons {
   color: white;
   border: none;
   cursor: pointer;
@@ -110,20 +52,13 @@ img {
   font-family: inherit;
   width: 7rem;
   height: 3rem;
-  align-self: center;
   background-color: #454545;
   outline: none;
-  position: relative;
   right: 10rem;
 }
 
-#next-click {
-  cursor: not-allowed;
-  background-color: #242424;
-}
-
-.inputs-clicked {
-  cursor: not-allowed;
+.main {
+  border: solid yellow 1px;
 }
 
 @media screen and (max-width: 680px) {
@@ -143,31 +78,5 @@ img {
 
   #title {
     font-size: 300%;
-  }
-
-  .inputs {
-    font-size: 1.2rem;
-    width: 75%;
-    margin: 1rem;
-    padding: 0.5rem;
-  }
-
-  #email {
-    margin: 0.5rem;
-  }
-
-  #username {
-    margin: 0.5rem;
-  }
-
-  #form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  #next {
-    margin-top: 1rem;
   }
 }
