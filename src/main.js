@@ -62,7 +62,6 @@ form.addEventListener("submit", async (e) => {
       headers: {
         "Content-Type": "application/json",
       },
-      mode: "cors",
       body: JSON.stringify({
         name: formData.get("name"),
         email: formData.get("email"),
