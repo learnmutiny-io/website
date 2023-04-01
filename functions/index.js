@@ -29,6 +29,8 @@ exports.sendEmailFromForm = functions.https.onRequest(async (req, res) => {
         dynamic_template_data: {
           name: name,
           userType: userType,
+          icon_url:
+            "https://github.com/zionmelson/learnmutiny/blob/4fd196871c0fb09379be13ff5dba039ab9b8ac40/assets/bear.pnghttps://github.com/zionmelson/learnmutiny/blob/4fd196871c0fb09379be13ff5dba039ab9b8ac40/assets/bear.png",
         },
         subject: "welcome to learnmutiny",
       };

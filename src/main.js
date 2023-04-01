@@ -23,9 +23,11 @@ const app = (document.querySelector("#app").innerHTML = `
           <div class="form-inputs">
             <input class="inputs" type="text" id="name" placeholder="name." />
             <input class="inputs" type="email" id="email" placeholder="email." />
-            <select class="inputs" id="userType" >
+            <select class="inputs" id="userType" required >
+              <option value="">select one.</option>
               <option value="student">student.</option>
               <option value="recruiter">recruiter.</option>
+              <option value="">investor.</option>
             </select>
           <div>
           <button id="button">learn.</button>
