@@ -55,17 +55,14 @@ form.addEventListener("submit", async (e) => {
   formData.append("email", emailVal);
   formData.append("userType", userTypeVal);
 
-  const headers = new Headers();
-  headers.append("Content-Type", "application/json");
-  headers.append("Access-Control-Allow-Origin", "*");
-  headers.append("Access-Control-Allow-Methods", "GET, POST");
-  headers.append("Access-Control-Allow-Headers", "Content-Type");
-
   const response = await fetch(
     "https://us-central1-learnmutiny-60952.cloudfunctions.net/sendEmailFromForm",
     {
       method: "POST",
-      headers: headers,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      mode: "cors",
       body: JSON.stringify({
         name: formData.get("name"),
         email: formData.get("email"),
