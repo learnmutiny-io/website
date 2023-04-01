@@ -94,7 +94,7 @@ function validateEmail(email) {
   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
     return email;
   }
-  alert("You have entered an invalid email address");
+  alert("You have entered an invalid email address.");
   return false;
 }
 
