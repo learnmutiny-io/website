@@ -4,7 +4,7 @@ import { set, ref, getDatabase } from "firebase/database";
 const firebaseConfig = {
   apiKey: "AIzaSyC5A2GeyIgaWaapl0adfp77wph7q3w6ds0",
   authDomain: "learnmutiny-60952.firebaseapp.com",
-  databaseURL: "https://learnmutiny-60952-default-rtdb.firebaseio.com",
+  databaseURL: "https://learnmutiny.firebaseio.com/",
   projectId: "learnmutiny-60952",
   storageBucket: "learnmutiny-60952.appspot.com",
   messagingSenderId: "554213932048",
@@ -43,6 +43,9 @@ const userType = document.getElementById("userType");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+  document.getElementById("title").innerHTML = "pending.";
+  document.getElementById("button").innerHTML = "pend.";
+  form.remove(document.getElementById("button"));
 
   let emailVal = email.value;
   let nameVal = _name.value;
