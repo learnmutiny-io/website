@@ -28,6 +28,7 @@ const app = (document.querySelector("#app").innerHTML = `
               <option value="student">student.</option>
               <option value="recruiter">recruiter.</option>
               <option value="">investor.</option>
+              <option value="">other.</option>
             </select>
           <div>
           <button id="button">learn.</button>
