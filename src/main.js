@@ -110,7 +110,7 @@ function validateName(name) {
     alert("Please enter a valid name.");
     return false;
   } else if (name.includes(".")) {
-    alert("Invalid username, no '.'");
+    alert("Invalid username, no '.' ");
   } else {
     return name;
   }
