@@ -15,14 +15,15 @@ const styles = {
   
     marginX: "sm:mx-16 mx-6",
     marginY: "sm:my-16 my-6",
+    
     zoomImage: {
       transition: "transform 0.3s ease",
       transformOrigin: "top center",
     },
+
     iconContainer: {
       borderRadius: '50%',
       width: '100px', height: '100px'
-      /* Other styles if necessary */
     },
 
     buttonContainer:{

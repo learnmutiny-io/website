@@ -81,13 +81,13 @@ const Mu = () => {
 
             {/* Build your own mu score contrainer*/}
             <div className={`w-full flex-col ${styles.flexCenter} ${styles.boxWidth} sm:flex-row`}>
-                <div>
+                <div className='sm:mr-[150px]'>
                     <h1 className={`${styles.heading2} `}>build up your mu score</h1>
                     <p className={`${styles.paragraph} font-extrabold mt-10`}>using artificial intelligence we can capture what you really know</p>
                 </div>
-                <div className="w-[800px] max-w-full h-auto">
-                    <img src={score} alt="mu_iphone" />
-                    <img src={concepts} className='w-[420px]' />
+                <div className="w-[800px] max-w-full h-auto" >
+                    <img src={score} alt="mu_iphone" className='w-[350px]'/>
+                    <img src={concepts} className='w-[350px]' />
                 </div>
             </div>
 
@@ -104,11 +104,13 @@ const Mu = () => {
                     <p className={`${styles.paragraph} font-extrabold mt-10`}>Your score is dynamic and reflects your engagement. the more you research the higher your score</p>
                     <div className={`w-full flex-col ${styles.flexCenter} ${styles.boxWidth}  mt-10`}>
 
-                        <img src={scores} alt="mu_iphone" />
+                        <img src={scores} alt="mu_iphone" className='w-[600px]'/>
                     </div>
                 </div>
             </div>
 
+
+            {/* signup container*/}
             <div className={`sm:w-1/2 w-full ${styles.flexCenter} ${styles.boxWidth}  mt-10 text-center sm:text-left`}>
                 <h1 className={`${styles.heading3} `}>sign up now for early access</h1>
             </div>
