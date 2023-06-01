@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { GrLinkedin } from 'react-icons/gr';
 import { BsGithub } from 'react-icons/Bs';
 import styles from '../style';
@@ -116,7 +117,7 @@ const Mu = () => {
             </div>
 
             <div className={`w-full mt-5 text-center sm:text-left`}>
-                <button style={styles.buttonContainer} className='bg-dimPrimary font-extrabold'><p className={`${styles.paragraph} font-bold`}>sign up</p></button>
+                <Link to="/signup"><button style={styles.buttonContainer} className='bg-dimPrimary font-extrabold'><p className={`${styles.paragraph} font-bold`}>sign up</p></button></Link>
             </div>
         </div>
     );

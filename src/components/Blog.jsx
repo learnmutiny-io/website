@@ -4,7 +4,7 @@ import footerlogo from '../assets/footerlogo.png'
 
 const Blog = () => {
   return (
-    <div className={`${styles.paddingX} ${styles.boxWidth} h-screen`}>
+    <div className={`${styles.paddingX} ${styles.boxWidth} h-screen mt-20`}>
          <h1 className={`${styles.heading2} `}>Our research</h1>
          <div className={`w-full flex-col ${styles.flexCenter} ${styles.boxWidth} sm:flex-row bg-dimPrimary mt-10`}  style={styles. blogContainer} >
             <img src={footerlogo} alt="logo" className='w-[200px]'/>

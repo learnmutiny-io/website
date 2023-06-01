@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import styles from "../style"
 import mu from '../assets/mu.png';
 import profile from '../assets/profile.png'
@@ -7,7 +8,7 @@ import mu_status from '../assets/mu_status.png'
 
 const Recruiter = () => {
   return (
-    <div className={`w-full flex-col ${styles.paddingX}`}>
+    <div className={`w-full flex-col ${styles.paddingX} mt-20`}>
       {/* meet the new mu container*/}
       <div className={`w-full flex-col ${styles.flexCenter} ${styles.boxWidth} sm:flex-row`}>
         <div>
@@ -57,7 +58,7 @@ const Recruiter = () => {
             </div>
 
             <div className={`w-full mt-5 text-center sm:text-left`}>
-                <button style={styles.buttonContainer} className='bg-dimPrimary font-extrabold'><p className={`${styles.paragraph} font-bold`}>sign up</p></button>
+                <Link to="/signup"><button style={styles.buttonContainer} className='bg-dimPrimary font-extrabold'><p className={`${styles.paragraph} font-bold`}>sign up</p></button></Link>
             </div>
 
     </div>
