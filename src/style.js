@@ -6,7 +6,7 @@ const styles = {
     paragraph: "font-poppins font-normal text-white text-[25px] leading-[30.8px]",
   
     flexCenter: "flex justify-center items-center",
-    flexStart: "flex justify-center items-start",
+    flexStart: "flex justify-start items-center",
     flexEnd: "flex justify-end items-center",
   
     paddingX: "sm:px-16 px-6",
@@ -30,6 +30,10 @@ const styles = {
       borderRadius: '20px 20px 20px 20px',
       width: '150px',
       padding: '10px 20px'
+    },
+
+    blogContainer: {
+      borderRadius: '30px 30px 30px 30px',
     }
   };
   
