@@ -4,7 +4,10 @@ import styles from "../style"
 import mu from '../assets/mu.png';
 import profile from '../assets/profile.png'
 import filter_student from '../assets/filter_student.png'
+import recruiters_mu_header from '../assets/recruiters_mu_header.svg'
+import recruiters_mu_body from '../assets/recruiters_mu_body.svg'
 import mu_status from '../assets/mu_status.png'
+
 
 const Recruiter = () => {
   return (
@@ -16,7 +19,7 @@ const Recruiter = () => {
           <p className={`${styles.paragraph} font-extrabold mt-10`}>hire talent with the exact skills you need</p>
         </div>
         <div className="w-[800px] max-w-full h-auto sm:mt-0 mt-10">
-          <img src={mu} alt="mu_iphone" className="w-[400px]"/>
+          <img src={recruiters_mu_header} alt="mu_iphone" className="w-[500px]"/>
         </div>
       </div>
 
@@ -24,7 +27,7 @@ const Recruiter = () => {
             {/* gain enhanced insights container*/}
             <div className={`w-full flex-col ${styles.flexCenter} ${styles.boxWidth} sm:flex-row`}>
                 <div className="w-[800px] max-w-full h-auto hidden sm:flex">
-                    <img src={profile} alt="profile" />
+                    <img src={recruiters_mu_body} alt="profile" className='w-[800px]'/>
                 </div>
 
                 {/* large devices*/}

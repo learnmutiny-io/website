@@ -9,6 +9,7 @@ import concepts from '../assets/concepts.png';
 import score from '../assets/score.png';
 import scores from '../assets/scores.png'
 import leetcode from '../assets/leetcode.svg'
+import accounts from '../assets/accounts.svg'
 
 const Mu = () => {
     return (
@@ -34,7 +35,7 @@ const Mu = () => {
                 <div className="hidden sm:flex flex-col">
                     <p className={`${styles.paragraph} font-extrabold mt-5`}>as you learn we capture your intelligence and display it to industry leading recruiters</p>
                     <p className={`${styles.paragraph} font-extrabold mt-20`}>Stand out from other candidates by connecting your mu with other apps.</p>
-                    <div className={`w-full flex-col ${styles.flexEnd} ${styles.boxWidth} sm:flex-row `}>
+                    {/*<div className={`w-full flex-col ${styles.flexEnd} ${styles.boxWidth} sm:flex-row `}>
                         <div style={styles.iconContainer} className={`w-40 h-[40px] ${styles.flexCenter} bg-white`}>
                             <GrLinkedin className='text-linkedIn bg-white' size={60} />
                         </div>
@@ -48,6 +49,9 @@ const Mu = () => {
                         <div style={styles.iconContainer} className={`w-40 h-[40px] ${styles.flexCenter} bg-white`}>
                             <img src={leetcode} className='w-[60px]' />
                         </div>
+                    </div>*/}
+                    <div className={`w-full flex-col ${styles.flexEnd} ${styles.boxWidth} sm:flex-row `}>
+                        <img src={accounts}/>
                     </div>
                 </div>
 
@@ -57,24 +61,12 @@ const Mu = () => {
                 <div className="sm:hidden flex">
                     <p className={`${styles.paragraph} font-extrabold mt-5`}>We capture your intelligence and display it to industry leading recruiters</p>
                 </div>
-                <div className="w-[800px] max-w-full h-auto sm:hidden flex flex-col">
+                <div className="w-[800px] max-w-full h-auto sm:hidden flex flex-col justify-center items-center">
                     <img src={mu_iphone_recruit} alt="mu_iphone_recruit" />
                     <p className={`${styles.paragraph} font-extrabold mt-5`}>Stand out from other candidates by connecting your mu with other apps.</p>
 
-                    <div className={`w-full flex-row ${styles.flexEnd} ${styles.boxWidth} sm:flex-row `}>
-                        <div style={styles.iconContainer} className={`w-40 h-[40px] ${styles.flexCenter} bg-white`}>
-                            <GrLinkedin className='text-linkedIn bg-white' size={60} />
-                        </div>
-                    </div>
-                    <div className={`w-full flex-row ${styles.flexCenter} ${styles.boxWidth} sm:flex-row`}>
-                        <div style={styles.iconContainer} className={`w-40 h-[40px] ${styles.flexCenter} bg-white`}>
-                            <BsGithub className='text-github bg-white' size={60} />
-                        </div>
-                    </div>
-                    <div className={`w-full flex-row ${styles.flexEnd} ${styles.boxWidth} sm:flex-row`}>
-                        <div style={styles.iconContainer} className={`w-40 h-[40px] ${styles.flexCenter} bg-white`}>
-                            <img src={leetcode} className='w-[60px]' />
-                        </div>
+                    <div className={`w-full  ${styles.flexCenter} ${styles.boxWidth} flex-row `}>
+                        <img src={accounts}/>
                     </div>
 
                 </div>
@@ -87,7 +79,7 @@ const Mu = () => {
                     <p className={`${styles.paragraph} font-extrabold mt-10`}>using artificial intelligence we can capture what you really know</p>
                 </div>
                 <div className="w-[800px] max-w-full h-auto" >
-                    <img src={score} alt="mu_iphone" className='w-[350px]'/>
+                    <img src={score} alt="mu_iphone" className='w-[350px]' />
                     <img src={concepts} className='w-[350px]' />
                 </div>
             </div>
@@ -105,7 +97,7 @@ const Mu = () => {
                     <p className={`${styles.paragraph} font-extrabold mt-10`}>Your score is dynamic and reflects your engagement. the more you research the higher your score</p>
                     <div className={`w-full flex-col ${styles.flexCenter} ${styles.boxWidth}  mt-10`}>
 
-                        <img src={scores} alt="mu_iphone" className='w-[600px]'/>
+                        <img src={scores} alt="mu_iphone" className='w-[700px]' />
                     </div>
                 </div>
             </div>
