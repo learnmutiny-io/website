@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import firebaseApp from './firebase';
+import { getFirestore, collection, addDoc, query, where, getDocs } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import styles from "../style";
 import logo from '../assets/logo.png';
+
 
 const SignUp = () => {
   useEffect(() => {
@@ -14,12 +17,21 @@ const SignUp = () => {
   const [email, setEmail] = useState('');
   const [formValid, setFormValid] = useState(true);
 
+  //get the database
+  const db  = getFirestore(firebaseApp)
+
 
   const selectUserType = (userType) => {
     setSelectedUserType(userType);
   };
 
-  const handleSubmit = (e) => {
+  const checkIfEmailExists = async () => {
+    const emailQuery = query(collection(db, 'formDetails'), where('email', '==', email));
+    const querySnapshot = await getDocs(emailQuery);
+    return !querySnapshot.empty;
+  };
+  
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!email || !selectedUserType) {
@@ -27,9 +39,31 @@ const SignUp = () => {
       return;
     }
 
+    const emailExists = await checkIfEmailExists();
+
     // should write form submission logic
-    console.log('Form submitted:', email, selectedUserType);
-    navigate('/confirmed');
+    //adding document to formDetails collection in friebase
+    if (emailExists) {
+      console.log('emailExists', emailExists)
+      console.log('Email already exists:', email);
+      // Handle the case when the email already exists (e.g., show an error message)
+      navigate('/confirmed', { state: { emailExists } });
+      return;
+    }
+
+    addDoc(collection(db, 'formDetails'), {
+      email,
+      selectedUserType,
+    })
+      .then(() => {
+        console.log('Form submitted:', email, selectedUserType);
+        navigate('/confirmed', { state: { emailExists } });
+      })
+      .catch((error) => {
+        console.error('Error submitting form:', error);
+      });
+    
+    
   };
 
   return (
@@ -46,7 +80,7 @@ const SignUp = () => {
               <input
                 className={`w-full px-4 py-[6px] text-white bg-primary rounded-[50px] font-[650] placeholder-primary ${!formValid ? 'border border-red-500' : 'border-formBorder-300'
                   }`}
-                  type="email"
+                type="email"
                 id="signup"
                 name="signup"
                 placeholder="enter email"
@@ -78,7 +112,7 @@ const SignUp = () => {
               <input type="hidden" id="user-type" name="userType" value={selectedUserType} />
             </div>
             <button className="px-4 py-2 text-white bg-primary rounded-[50px] w-[150px] font-[650] hover:bg-gray-600" type="submit">sign up</button>
-            <img src={logo} className='w-[120px] self-end mt-3 sm:mt-0'/>
+            <img src={logo} className='w-[120px] self-end mt-3 sm:mt-0' />
           </form>
         </div>
       </div>

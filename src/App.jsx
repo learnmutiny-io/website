@@ -10,10 +10,12 @@ const App = () => {
     return location.pathname === "/" ? "h-screen" : "";
   };
 
+  const shouldShowFooter = useHomePageStyles() === "";
+
   return (
       <div className={`bg-primary w-full overflow-hidden flex flex-col ${useHomePageStyles()}`}>
-        <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-          <div className={`${styles.boxWidth}`}>
+        <div className={` ${styles.paddingX} ${styles.flexCenter}`}>
+          <div className={`${styles.boxWidth} `}>
             <Navbar />
           </div>
         </div>
@@ -29,11 +31,13 @@ const App = () => {
             </Routes>
           </div>
         </div>
+        {shouldShowFooter && (
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
             <Footer />
           </div>
         </div>
+      )}
       </div>
   );
 };
