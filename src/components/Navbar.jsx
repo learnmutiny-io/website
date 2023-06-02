@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { AiOutlineMenu } from 'react-icons/ai';
 import { Link } from "react-router-dom";
-
-import logo from "../assets/logo.png";
+import footerlogo from '../assets/footerlogo.png'
 import close from "../assets/close.svg";
 import { navLinks } from "../constants";
 
@@ -13,16 +12,15 @@ const Navbar = () => {
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar">
       <Link to="/" className="flex items-center">
-        <img src={logo} alt="logo" className="w-[150px] h-[32px] bg-primary" />
+        <img src={footerlogo} alt="logo" className="w-[80px] h-[80px] bg-primary" />
       </Link>
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[16px] ${
-              active === nav.title ? "text-white" : "text-dimWhite"
-            } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
+            className={`font-poppins font-normal cursor-pointer text-[16px] ${active === nav.title ? "text-white" : "text-dimWhite"
+              } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
             onClick={() => setActive(nav.title)}
           >
             <Link to={`/${nav.id}`} className="hover:text-white">{nav.title}</Link>
@@ -46,17 +44,15 @@ const Navbar = () => {
         )}
 
         <div
-          className={`${
-            !toggle ? "hidden" : "flex"
-          } p-6 bg-primary absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar mt-0`}
+          className={`${!toggle ? "hidden" : "flex"
+            } p-6 bg-primary absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar mt-0`}
         >
           <ul className="list-none flex justify-end items-start flex-1 flex-col">
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                  active === nav.title ? "text-white" : "text-dimWhite"
-                } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
+                className={`font-poppins font-medium cursor-pointer text-[16px] ${active === nav.title ? "text-white" : "text-dimWhite"
+                  } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                 onClick={() => {
                   setActive(nav.title);
                   setToggle(false);

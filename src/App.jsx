@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import styles from "./style";
-import { Navbar, Home, Mu, Footer, SignUp, Recruiter, Blog } from "./components";
+import { Navbar, Home, Mu, Footer, SignUp, Recruiter, Blog, Confirmed } from "./components";
 
 const App = () => {
 
@@ -25,6 +25,7 @@ const App = () => {
               <Route path="/recruiter" element ={<Recruiter/>}/>
               <Route path="/blog" element ={<Blog/>}/>
               <Route path="/signup" element ={<SignUp/>}/>
+              <Route path="/confirmed" element ={<Confirmed/>}/>
             </Routes>
           </div>
         </div>

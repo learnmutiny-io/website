@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import SignUp from "./SignUp";
 import Recruiter from "./Recruiter";
 import Blog from "./Blog";
+import Confirmed from "./Confirmed";
 
 
 
@@ -16,5 +17,6 @@ export {
   Footer,
   SignUp,
   Recruiter,
-  Blog
+  Blog,
+  Confirmed
 };
