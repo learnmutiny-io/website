@@ -3,13 +3,14 @@ import { initializeApp } from 'firebase/app';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBz--KYvMDuYtqDUoVAsUwwKkpLHz0O9QI",
-    authDomain: "learnmutiny-signup.firebaseapp.com",
-    projectId: "learnmutiny-signup",
-    storageBucket: "learnmutiny-signup.appspot.com",
-    messagingSenderId: "1043518567726",
-    appId: "1:1043518567726:web:d061c49e8679dedfce76bf"
-};
+    apiKey: "AIzaSyC5A2GeyIgaWaapl0adfp77wph7q3w6ds0",
+    authDomain: "learnmutiny-60952.firebaseapp.com",
+    databaseURL: "https://learnmutiny-60952-default-rtdb.firebaseio.com/",
+    projectId: "learnmutiny-60952",
+    storageBucket: "learnmutiny-60952.appspot.com",
+    messagingSenderId: "554213932048",
+    appId: "1:554213932048:web:17ad647356f22fe261de95"
+  };
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
