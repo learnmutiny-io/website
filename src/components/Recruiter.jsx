@@ -1,16 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import styles from "../style";
-import mu from "../assets/mu.png";
-import profile from "../assets/profile.png";
 import filter_student from "../assets/filter_student.png";
 import recruiters_mu_header from "../assets/recruiters_mu_header.svg";
-import recruiters_mu_body from "../assets/recruiters_mu_body.svg";
 import mu_status from "../assets/mu_status.png";
 import recruiter_mu_body from "../assets/recruiter_mu_body.png";
 
 const Recruiter = () => {
   useEffect(() => {
+    window.scrollTo(0, 0);
     const containers = document.querySelectorAll(".scroll-container");
 
     const handleScroll = () => {

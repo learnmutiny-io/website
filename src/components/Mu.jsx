@@ -1,17 +1,8 @@
-import React, { useEffect, useRef } from "react";
-import { useWindowScroll } from "react-use";
-
+import React, { useEffect} from "react";
 import { Link } from "react-router-dom";
-import { GrLinkedin } from "react-icons/gr";
-import { BsGithub } from "react-icons/Bs";
 import styles from "../style";
-import mu_iphone from "../assets/mu_iphone.svg";
 import mu_new from "../assets/mu_new.png";
-import mu_iphone_recruit from "../assets/mu_iphone_recruit.svg";
-import concepts from "../assets/concepts.png";
-import score from "../assets/score.png";
 import scores from "../assets/scores.png";
-import leetcode from "../assets/leetcode.svg";
 import accounts from "../assets/accounts.svg";
 import mu_recruiter from "../assets/mu_recruiter.png";
 import extension from "../assets/extension.png";
@@ -21,6 +12,7 @@ import scores_vertical from "../assets/scores_vertical.png";
 
 const Mu = () => {
   useEffect(() => {
+    window.scrollTo(0, 0);
     const containers = document.querySelectorAll(".scroll-container");
 
     const handleScroll = () => {

@@ -1,9 +1,5 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { GrLinkedin, GrInstagram } from 'react-icons/gr';
 import styles from "../style"
-import footerlogo from '../assets/footerlogo.png'
 import instagram_icon from '../assets/instagram_icon.png'
 import linkedin_icon from '../assets/linkedin_icon.png'
 

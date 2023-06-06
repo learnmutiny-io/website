@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "../style";
 import footerlogo from "../assets/footerlogo.png";
 
 const Blog = () => {
+  useEffect(() => {
+    //scroll to top of the page on loading
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div
       className={`w-full flex-col ${styles.paddingX} sm:mt-20 mb-20 pt-[180px] h-screen`}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import main_with_letters from '../assets/main_with_letters.png'
 import letters from '../assets/letters.png'
 import main from '../assets/main.png'
