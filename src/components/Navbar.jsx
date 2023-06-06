@@ -4,14 +4,16 @@ import { Link } from "react-router-dom";
 import footerlogo from '../assets/footerlogo.png'
 import close from "../assets/close.svg";
 import { navLinks } from "../constants";
+import styles from '../style';
+
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="w-full flex py-6 justify-between items-center navbar">
-      <Link to="/" className="flex items-center">
+    <nav className="w-full flex py-6 justify-between items-center navbar fixed top-0 z-50 bg-primary sm:pr-[140px] pr-[35px]">
+      <Link to="/" className="flex items-center"  onClick={() => setActive('Home')}>
         <img src={footerlogo} alt="logo" className="w-[80px] h-[80px] bg-primary" />
       </Link>
 
@@ -19,11 +21,12 @@ const Navbar = () => {
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[16px] ${active === nav.title ? "text-white" : "text-dimWhite"
-              } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
+            className={`font-poppins font-semibold cursor-pointer text-[16px] ${active === nav.title ? "text-red-400" : "text-white"
+              } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"} ${nav.title === 'signup' ? "bg-dimPrimary" : ""} `}
+              style={nav.title === 'signup' ? styles.signUpContainer : {}}
             onClick={() => setActive(nav.title)}
           >
-            <Link to={`/${nav.id}`} className="hover:text-white">{nav.title}</Link>
+            <Link to={`/${nav.id}`} className="hover:text-red-300">{nav.title}</Link>
           </li>
         ))}
       </ul>

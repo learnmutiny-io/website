@@ -1,11 +1,12 @@
 const styles = {
     boxWidth: "xl:max-w-[1280px] w-full",
   
-    heading2: "font-poppins font-semibold xs:text-[70px] text-[42px] text-white xs:leading-[76.8px] leading-[66.8px] w-full",
-    heading3: "font-poppins font-semibold xs:text-[50px] text-[42px] text-white xs:leading-[76.8px] leading-[66.8px] w-full",
-    paragraph: "font-poppins font-normal text-white text-[25px] leading-[30.8px]",
-    paragraph2: "font-poppins font-normal text-white text-[16px] leading-[30.8px]",
-    paragraph3: "font-poppins font-normal text-white text-[24px] leading-[30.8px]",
+    heading2: "font-poppins font-semibold xs:text-[90px] text-[45px] text-white xs:leading-[86.8px] leading-[48.8px] w-full",
+    heading3: "font-poppins font-semibold xs:text-[50px] text-[42px] text-white xs:leading-[76.8px] leading-[53.8px] w-full",
+    paragraph: "font-poppins font-semibold text-white xs:text-[32px] text-[28px] xs:leading-[40.8px] leading-[30.8px]",
+    paragraph2: "font-poppins font-semibold text-white xs:text-[24px] text-[16px] leading-[30.8px]",
+    paragraph3: "font-poppins font-normal text-white xs:text-[24px] text-[14px] leading-[30.8px]",
+    paragraph4: "font-poppins font-semibold text-white xs:text-[24px] text-[10px] leading-[30.8px]",
   
     flexCenter: "flex justify-center items-center",
     flexStart: "flex justify-start items-start",
@@ -29,14 +30,28 @@ const styles = {
     },
 
     buttonContainer:{
-      borderRadius: '20px 20px 20px 20px',
+      borderRadius: '50px 50px 50px 50px',
       width: '150px',
       padding: '10px 20px'
     },
 
-    blogContainer: {
+    blogContainerLarge: {
       borderRadius: '30px 30px 30px 30px',
-    }
+      width:'100%',
+    },
+
+    blogContainerSmall: {
+      borderRadius: '10px 10px 10px 10px',
+      width:'100%',
+      height: '70px'
+    },
+
+    signUpContainer:{
+      borderRadius: '50px 50px 50px 50px',
+      width: '100px',
+      padding: '10px 20px'
+    },
+
   };
   
   export const layout = {
