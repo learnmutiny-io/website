@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from 'axios';
 import firebaseApp from "./firebase";
 import {
   getFirestore,
@@ -70,6 +71,20 @@ const SignUp = () => {
       .catch((error) => {
         console.error("Error submitting form:", error);
       });
+
+    // Send a POST request to your server endpoint
+    axios.post('http://localhost:80/signup', {
+      email,
+      selectedUserType,
+    })
+      .then((response) => {
+        console.log('Confirmation email sent');
+        // Handle the success response from the server
+      })
+      .catch((error) => {
+        console.error('Error sending confirmation email:', error);
+        // Handle the error response from the server
+      });
   };
 
   return (
@@ -107,9 +122,8 @@ const SignUp = () => {
                 sign up
               </label>
               <input
-                className={`w-full px-4 py-[6px] mt-2 h-[42px] text-white bg-primary rounded-[50px] font-[650] placeholder-primary ${
-                  !formValid ? "border border-red-500" : "border-formBorder-300"
-                }`}
+                className={`w-full px-4 py-[6px] mt-2 h-[42px] text-white bg-primary rounded-[50px] font-[650] placeholder-primary ${!formValid ? "border border-red-500" : "border-formBorder-300"
+                  }`}
                 type="email"
                 id="signup"
                 name="signup"
@@ -127,20 +141,18 @@ const SignUp = () => {
               </label>
               <div className="flex flex-col">
                 <button
-                  className={`w-full px-4 py-[6px] mt-2 h-[42px] text-darkPrimary bg-primary rounded-[50px] font-[650] mb-5 text-left ${
-                    selectedUserType === "MU" ? "border-white border-2" : ""
-                  } ${!formValid ? "border border-red-500" : ""}`}
+                  className={`w-full px-4 py-[6px] mt-2 h-[42px] text-darkPrimary bg-primary rounded-[50px] font-[650] mb-5 text-left ${selectedUserType === "MU" ? "border-white border-2" : ""
+                    } ${!formValid ? "border border-red-500" : ""}`}
                   type="button"
                   onClick={() => selectUserType("MU")}
                 >
                   mu
                 </button>
                 <button
-                  className={`w-full px-4 py-[6px] text-darkPrimary mt-2 h-[42px] bg-primary rounded-[50px] font-[650] text-left ${
-                    selectedUserType === "Recruiter"
+                  className={`w-full px-4 py-[6px] text-darkPrimary mt-2 h-[42px] bg-primary rounded-[50px] font-[650] text-left ${selectedUserType === "Recruiter"
                       ? "border-white border-2"
                       : ""
-                  }`}
+                    }`}
                   type="button"
                   onClick={() => selectUserType("Recruiter")}
                 >
