@@ -13,7 +13,7 @@ const Blog = () => {
       className={`w-full flex-col ${styles.paddingX} sm:mt-20 mb-20 pt-[180px] h-screen`}
     >
       <h1 className={`${styles.heading2} sm:text-left text-center`}>
-        our research
+        our research.
       </h1>
       {/*large devices*/}
       <div
