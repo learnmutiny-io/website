@@ -1,4 +1,4 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "../style";
 import mu_new from "../assets/mu_new.png";
@@ -106,7 +106,7 @@ const Mu = () => {
             className={`${styles.paragraph} font-extrabold mt-5 text-center self-center`}
           >
             as you learn we capture your <br /> intelligence and display it to{" "}
-            <br /> industry leading recruiters
+            <br /> industry leading recruiters.
           </p>
           <p
             className={`${styles.paragraph} font-extrabold mt-20 text-center self-center`}
@@ -160,7 +160,7 @@ const Mu = () => {
           </h1>
           <p className={`${styles.paragraph} font-extrabold mt-20`}>
             using artificial intelligence <br /> we can capture what you <br />{" "}
-            really know
+            really know.
           </p>
           <p className={`${styles.paragraph} font-extrabold mt-20 mb-10`}>
             when you learn we can gauge <br /> your skill expertise in your{" "}
@@ -217,7 +217,7 @@ const Mu = () => {
         <div className="text-center">
           <p className={`${styles.paragraph} font-extrabold mt-10 `}>
             your score is dynamic and reflects <br /> your engagement. the more
-            you <br /> research the higher your score
+            you <br /> research the higher your score.
           </p>
           <div
             className={`w-full flex-col ${styles.flexCenter} ${styles.boxWidth}  mt-10`}

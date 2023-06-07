@@ -5,6 +5,8 @@ const styles = {
     "font-sans font-bold xs:text-[90px] text-[45px] text-white xs:leading-[86.8px] leading-[48.8px] w-full",
   heading3:
     "font-sans font-bold xs:text-[50px] text-[42px] text-white xs:leading-[76.8px] leading-[53.8px] w-full",
+  heading4:
+    "font-sans font-bold xs:text-[40px] text-[36px] text-white xs:leading-[76.8px] leading-[53.8px] w-full",
   paragraph:
     "font-sans font-semibold text-white xs:text-[32px] text-[28px] xs:leading-[40.8px] leading-[30.8px]",
   paragraph2:
