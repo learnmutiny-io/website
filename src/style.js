@@ -2,19 +2,17 @@ const styles = {
   boxWidth: "xl:max-w-[1280px] w-full",
 
   heading2:
-    "font-poppins font-bold xs:text-[90px] text-[45px] text-white xs:leading-[86.8px] leading-[48.8px] w-full",
+    "font-sans font-bold xs:text-[90px] text-[45px] text-white xs:leading-[86.8px] leading-[48.8px] w-full",
   heading3:
-    "font-poppins font-bold xs:text-[50px] text-[42px] text-white xs:leading-[76.8px] leading-[53.8px] w-full",
+    "font-sans font-bold xs:text-[50px] text-[42px] text-white xs:leading-[76.8px] leading-[53.8px] w-full",
   paragraph:
-    "font-poppins font-semibold text-white xs:text-[32px] text-[28px] xs:leading-[40.8px] leading-[30.8px]",
+    "font-sans font-semibold text-white xs:text-[32px] text-[28px] xs:leading-[40.8px] leading-[30.8px]",
   paragraph2:
-    "font-poppins font-semibold text-white xs:text-[24px] text-[16px] leading-[30.8px]",
+    "font-sans font-semibold text-white xs:text-[24px] text-[16px] leading-[30.8px]",
   paragraph3:
-    "font-poppins font-semibold text-white xs:text-[24px] text-[14px] leading-[30.8px]",
+    "font-sans font-semibold text-white xs:text-[24px] text-[14px] leading-[30.8px]",
   paragraph4:
-    "font-poppins font-semibold text-white xs:text-[24px] text-[10px] leading-[30.8px]",
-  paragraph5:
-    "font-poppins font-normal text-white xs:text-[20px] text-[15px] leading-[30.8px]",
+    "font-sans font-semibold text-white xs:text-[24px] text-[10px] leading-[30.8px]",
 
   flexCenter: "flex justify-center items-center",
   flexStart: "flex justify-start items-start",

@@ -20,7 +20,12 @@ module.exports = {
       },
 
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
+        sans: ["Montserrat", "Arial", "sans-serif"],
+        fontWeight: {
+          normal: "400",
+          semibold: "600",
+          bold: "700",
+        },
       },
     },
     screens: {
