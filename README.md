@@ -8,3 +8,7 @@ go to the working directory and run the below commands
 > npm install
 
 > npm run dev
+
+To run the server use the below command and make sure the server is up and running in other terminal
+
+>node express.cjs
