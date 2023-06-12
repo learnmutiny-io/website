@@ -24,7 +24,7 @@ const Blog = () => {
           <img src={footerlogo} alt="logo" className="w-[150px]" />
           <p className={`${styles.paragraph}`}>coming soon.</p>
         </div>
-        <p className={`${styles.paragraph2} self-end`}>june 2nd 2023</p>
+        <p className={`${styles.paragraph2} self-end hidden`}>june 2nd 2023</p>
       </div>
       {/*small devices*/}
       <div
@@ -35,7 +35,7 @@ const Blog = () => {
         <p className={`${styles.paragraph2} self-start text-center flex-1`}>
           coming soon.
         </p>
-        <p className={`${styles.paragraph4} self-end `}>june 2nd 2023</p>
+        <p className={`${styles.paragraph4} self-end hidden`}>june 2nd 2023</p>
       </div>
     </div>
   );
