@@ -22,7 +22,7 @@ const Blog = () => {
       >
         <div className="flex flex-row justify-start items-center">
           <img src={footerlogo} alt="logo" className="w-[150px]" />
-          <p className={`${styles.paragraph}`}>coming soon.</p>
+          <p className={`${styles.paragraph}`}>coming soon</p>
         </div>
         <p className={`${styles.paragraph2} self-end hidden`}>june 2nd 2023</p>
       </div>
